@@ -44,7 +44,7 @@ class SiteCrawler
         $valuesArray = [];
 
         foreach ($specifications as $key => $value) {
-            $key = preg_replace('/<[^>]*>|\[\s\?\s\]/', '', $key);
+            $key = preg_replace('/<[^>]*>|\[\s\?\s\]|:/', '', $key);
             $value = preg_replace('/<[^>]*>/', '', $value);
             array_push($keysArray, $key);
             array_push($valuesArray, $value);
